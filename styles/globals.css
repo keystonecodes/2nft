@@ -1,16 +1,210 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-white;
+  }
+  .dark {
+    background: rgb(153,69,255);
+background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 25%, rgba(29,36,52,1) 50%);
+  }
+
+  .light {
+    background: rgb(218,189,254);
+background: linear-gradient(90deg, rgba(218,189,254,1) 0%, rgba(146,247,205,1) 25%, rgba(209,213,219,1) 50%);
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.header-container {
+  @apply sticky top-0 z-50 bg-slate-100 dark:bg-gray-900
 }
 
-* {
-  box-sizing: border-box;
+.content-container {
+  @apply flex flex-grow w-full justify-center pt-20 bg-slate-100 dark:bg-gray-900
+}
+
+.header {
+  @apply mx-auto px-4 pb-4 pt-[70px] sm:py-4 flex items-center
+}
+
+.hamburger-menu {
+  @apply sm:hidden absolute top-[-20px] left-[20px] p-3 mt-9 hover:bg-[#9945FF] dark:hover:bg-[#14f195] rounded lg:hidden ml-auto hover:text-white outline-none
+}
+
+.header-items-container {
+  @apply sm:inline-flex sm:flex-row sm:ml-auto sm:w-auto w-full sm:items-center items-start flex sm:h-auto
+}
+
+.home-header-items-container {
+  @apply sm:inline-flex sm:flex-row sm:ml-auto sm:w-auto w-full items-center justify-center flex sm:h-auto space-x-2 sm:space-x-0
+}
+
+.footer {
+  @apply bottom-0 bg-slate-100 dark:bg-gray-900
+}
+
+.footer-text {
+  @apply mx-auto px-4 py-4 flex justify-center items-center
+}
+
+.trans-button {
+  @apply transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:skew-y-[-3deg] duration-300
+}
+
+.group-trans-button {
+  @apply transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 group-hover:skew-y-[-3deg] duration-300
+}
+
+.header-button {
+  @apply sm:inline-flex mt-[11px] sm:mt-0 sm:font-bold sm:text-xl mx-[1px] sm:mx-1 px-[3px] sm:px-2 py-1 rounded font-bold items-center justify-center hover:bg-[#9945FF] dark:hover:bg-[#14f195] hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+}
+
+.github-button {
+  @apply sm:inline-flex sm:font-bold sm:text-xl px-2 pt-2 pb-1 sm:pb-2 rounded font-bold items-center justify-center hover:bg-[#9945FF] dark:hover:bg-[#14f195] hover:text-white transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300
+}
+
+.sun-button {
+  @apply w-[54px] h-[54px] p-3 absolute right-[10px] top-0 mt-[16px] hover:bg-[#14f195] rounded ml-auto hover:text-white outline-none
+}
+
+.moon-button {
+  @apply w-[54px] h-[54px] p-3 absolute right-[10px] top-0 mt-[16px] hover:bg-[#9945FF] rounded ml-auto hover:text-white outline-none
+}
+
+.connect-button-container {
+  @apply absolute right-[92px] top-0 mt-4
+}
+
+.anchor-chevron {
+  @apply inline-flex w-5 h-5 sm:hidden pb-[2px]
+}
+
+.header-chevron {
+  @apply hidden sm:inline w-7 h-7 opacity-50
+}
+
+.section-container {
+  @apply my-10 mx-10 md:mx-40 lg:mx-60 py-8 light dark:dark rounded-xl shadow-lg shadow-[#9945FF] dark:shadow-[#14F195] border-4 border-gray-900 dark:border-gray-300 overflow-hidden
+}
+
+.section-header {
+  @apply flex font-bold text-2xl justify-center
+}
+
+.section-text {
+  @apply text-center px-12 pt-4 sm:px-20
+}
+
+.dev-container {
+  @apply flex flex-col justify-center items-center lg:pt-10 space-y-0 xl:flex-row xl:space-x-60
+}
+
+.dev-image-container {
+  @apply flex flex-col justify-center items-center my-10 xl:my-0
+}
+
+.dev-image {
+  @apply relative w-[200px] h-[200px] border-4 border-gray-900 dark:border-gray-300 rounded-full overflow-hidden shadow-lg shadow-gray-900 dark:shadow-gray-300
+}
+
+.dev-name {
+  @apply hidden lg:inline text-xl mt-8 font-bold px-3 py-2 rounded
+}
+
+.project-button {
+  @apply sm:inline-flex sm:font-bold sm:text-xl px-3 py-2 rounded font-bold items-center justify-center trans-button hover:bg-[#9945ff] dark:hover:bg-[#14f195] hover:text-white
+}
+
+.blockchain-container {
+  @apply flex flex-col pb-6 justify-center items-center w-screen lg:flex-row lg:pt-20 lg:gap-x-[320px]
+}
+
+.solana-card {
+  @apply flex flex-col justify-center items-center py-8 my-10 lg:my-0 bg-gradient-to-r from-[#9945ff] to-[#14f195] dark:from-[#9945ff] dark:to-[#14f195] shadow-lg shadow-[#9945FF] dark:shadow-[#14F195] border-4 rounded-lg border-gray-900 dark:border-gray-300 cursor-pointer
+}
+
+.ethereum-card {
+  @apply flex flex-col justify-center items-center pb-8 my-10 lg:my-0 lg:pt-[10px] bg-[#f4f7fa] dark:bg-[#1d2434] shadow-lg shadow-[#1d2434] dark:shadow-gray-300 border-4 rounded-lg border-gray-900 dark:border-gray-300 cursor-pointer
+}
+
+.blockchain-link {
+  @apply sm:group-hover:border-2 rounded-lg border-gray-900 dark:border-gray-300
+}
+
+.blockchain-text {
+  @apply sm:inline-flex sm:text-xl px-3 py-2 rounded font-bold items-center justify-center
+}
+
+.solana-bg {
+  @apply bg-gradient-to-r from-[#dec4fd] to-[#85cfb0] dark:from-[#9945ff] dark:to-[#15ce81]
+}
+
+.input {
+  @apply bg-transparent placeholder-[#d9d9d9] outline-none text-[#d9d9d9]  pl-4 border border-transparent w-full rounded-full focus:bg-[#363c44] dark:focus:bg-[#cbd0d8] dark:placeholder-gray-500 dark:text-gray-500 dark:caret-gray-500
+}
+
+.search-container {
+  @apply flex flex-row justify-center items-center bg-[#363c44] p-3  rounded-full w-[280px] sm:w-[500px] h-12 dark:bg-[#cbd0d8]
+}
+
+.wallet-adapter-button-trigger {
+  @apply bg-transparent w-[136px] justify-center space-x-0 hover:bg-[#9945ff] hover:dark:bg-[#14f195] border-solid border-2 border-gray-900 text-gray-900 dark:border-white dark:text-white px-2 !important
+}
+
+.chakra-modal__content-container {
+  @apply items-center !important
+}
+
+.chakra-modal__content {
+  @apply place-items-center mx-1 bg-[#2c2d30] rounded-xl shadow-lg  !important
+}
+
+.chakra-modal__header {
+  @apply text-white text-3xl !important
+}
+
+.chakra-modal__close-btn {
+  @apply text-[#636468] hover:text-white bg-[#2b2b2c] !important
+}
+
+.chakra-container {
+  @apply px-[6px] !important
+}
+
+.chakra-button {
+  @apply border-2 h-[50px] px-1 !important
+}
+
+.css-2wtqp8 {
+  @apply hover:bg-[#9945ff] hover:dark:bg-[#15ce81] w-[136px] bg-transparent border-solid border-2 border-gray-900 text-gray-900 dark:border-white dark:text-white !important
+}
+
+.css-1j8qsi1 {
+  @apply text-white p-2 h-[50px] hover:bg-[#404144] bg-[#2b2b2c] rounded-xl border-none !important
+}
+
+.css-1fwbh1l {
+  @apply w-[150px] h-[50px] flex items-center justify-center !important
+}
+
+.css-vwzpw9 {
+  @apply hover:bg-[#9945ff] hover:dark:bg-[#15ce81] !important
+}
+
+.chakra-modal__body {
+  @apply w-full !important
+}
+
+.chakra-menu__menu-list {
+  @apply bg-[#2c2d30] border-none rounded-lg !important
+}
+
+.chakra-menu__menuitem {
+  @apply hover:bg-[#404144] bg-[#2b2b2c] border-none text-white font-bold my-2 w-52 mx-2 rounded-lg !important
+}
+
+.sc-bdvvtL {
+  @apply font-bold
 }
