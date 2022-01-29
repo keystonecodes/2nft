@@ -1,6 +1,6 @@
 {
   "name": "2nft",
-  "private": false,
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
