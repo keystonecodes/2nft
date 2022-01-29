@@ -25,7 +25,7 @@ class ScrollToTop extends Component {
 
   render() {
     return (
-      <div className="fixed top-[80px] right-[14px] sm:top-[23px] sm:left-[240px]">
+      <div className="fixed top-[80px] right-[14px] sm:top-[23px] sm:left-[340px]">
         <Link href="#top">
           <a className="inline-flex items-center p-1 rounded-full border-2 border-gray-900 dark:border-white shadow-sm text-gray-900 dark:text-white bg-transparent transition-opacity hover:bg-[#9945FF] hover:dark:bg-[#14f195]">
             <ArrowSmUpIcon className="h-6 w-6" />

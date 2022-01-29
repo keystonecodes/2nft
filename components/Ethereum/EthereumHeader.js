@@ -69,6 +69,13 @@ function EthereumHeader() {
           }   w-full sm:inline-flex sm:w-auto pl-1`}
         >
           <div className="header-items-container">
+          <Link href="https://www.keystone.codes">
+              <a className="header-button">
+                <ChevronRightIcon className="anchor-chevron" />
+                Home
+              </a>
+            </Link>
+            <ChevronRightIcon className="header-chevron" />
             <Link href="/">
               <a className="header-button">
                 <ChevronRightIcon className="anchor-chevron" />

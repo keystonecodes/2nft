@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Logo from "../Logo";
 import ThemeChanger from "../ThemeChanger";
+import Link from "next/link";
+import { ChevronRightIcon } from "@heroicons/react/solid";
 
 function GalleryHeader() {
   const [active, setActive] = useState(false);
@@ -35,8 +37,14 @@ function GalleryHeader() {
           }   w-full sm:inline-flex sm:w-auto pl-4`}
         >
           <div className="header-items-container">
-            
-            <h1 className="hidden sm:inline font-bold text-xl px-3">
+          <Link href="https://www.keystone.codes">
+              <a className="header-button">
+                <ChevronRightIcon className="anchor-chevron" />
+                Home
+              </a>
+            </Link>
+            <ChevronRightIcon className="header-chevron" />
+            <h1 className="hidden sm:inline font-bold text-xl px-3 opacity-50">
               2NFT
             </h1>
           </div>
