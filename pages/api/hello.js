@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import Cors from 'cors'
-import initMiddleware from '../../lib/init-middleware'
+import initMiddleware from '../../contexts/lib/init-middleware'
 
 // Initialize the cors middleware
 const cors = initMiddleware(
