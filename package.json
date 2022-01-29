@@ -31,6 +31,7 @@
     "@web3-react/walletconnect-connector": "^6.2.8",
     "@web3-react/walletlink-connector": "^6.2.8",
     "blockies-ts": "^1.0.0",
+    "cors": "^2.8.5",
     "deepmerge": "^4.2.2",
     "ethers": "^5.1.4",
     "framer-motion": "^4",

@@ -53,14 +53,6 @@ const nextConfig = {
     }
     return config;
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://2nft.keystone.codes/:path*',
-      },
-    ]
-  },
 };
 
 module.exports = withPlugins(plugins, nextConfig);
