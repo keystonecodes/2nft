@@ -45,8 +45,8 @@ function SolanaHeader() {
           }   w-full sm:inline-flex sm:w-auto pl-1`}
         >
           <div className="header-items-container">
-          <Link href="https://www.keystone.codes">
-              <a className="header-button">
+            <Link href="https://www.keystone.codes">
+              <a className="mt-2 sm:mt-0 header-button">
                 <ChevronRightIcon className="anchor-chevron" />
                 Home
               </a>
